@@ -30,6 +30,7 @@ int main()
             ans[k]=arr_a[i++];
             continue;
         }
+		
         else
             arr_a[i] > arr_b[j] ? ans[k]=arr_b[j++] : ans[k]=arr_a[i++];
     }
