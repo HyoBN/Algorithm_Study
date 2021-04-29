@@ -7,11 +7,11 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
     
-    int n,m;
+    int n,m,i,j;
     int arr_a[1000001];
     int arr_b[1000001];
     int ans[2000003];
-    int i,j;
+	
     cin>>n>>m;
     for(i=0;i<n;i++)
         cin>>arr_a[i];
