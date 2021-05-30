@@ -12,7 +12,6 @@ int main()
 	c+=d;
 	x=stoll(a); //stoi를 사용하게 되면 a가 int형 범위를 벗어나게 되면 에러남! 
 	y=stoll(c);
-	
 	cout<<x+y;
 	return 0;
 	
