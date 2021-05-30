@@ -18,9 +18,7 @@ int main()
 		else if((int)str[i]>=97 &&(int)str[i]<=109) // 소문자
 			str[i]=(int)str[i]+13;
 		else if((int)str[i]>=110 &&(int)str[i]<=122) // 소문자
-			str[i]=(int)str[i]-13;
-		
-			
+			str[i]=(int)str[i]-13;	
 	}
 	cout<<str;
 	
