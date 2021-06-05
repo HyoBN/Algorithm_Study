@@ -11,15 +11,12 @@ int main()
 	int cur=1;
 	
 	for(int i=str.size()-1;i>=0;i--){
-		if(str[i] >='A'){
+		if(str[i] >='A')
 			sum+=(str[i]-'A'+10)*cur;
-		}
 		else
 			sum+=(str[i]-'0')*cur;
 		cur*=b;
-			
 	}
 	cout<<sum;
 
-	
 }
