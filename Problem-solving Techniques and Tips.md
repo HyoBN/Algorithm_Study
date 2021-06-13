@@ -3,16 +3,44 @@
 PS를 하며 유용하게 사용할 수 있는 메소드나 기법, 알게 된 점 등  
 기억하고 활용할 만한 모든 내용을 정리.  
 
-### 1. 메소드.
+### 1. 메소드
+
+#### stoi 함수
+ - string to int 말 그대로 문자열을 정수형으로 변환하는 함수.
+ - string 헤더파일에 선언되어 있음.
+ - stof, stoll 등 다른 정수 자료형으로도 변환 가능.
+ - 사용 방법)
+ 
+```c
+#include <string>
+
+int a;
+string str;
+a=stoi(str);
+```
+
+#### to_string 함수
+ - to string 말 그대로 정수를 문자열로 변환하는 함수.
+ - string 헤더파일에 선언되어 있음.
+ - int, float, long long 등 정수 자료형 모두 사용 가능.
+ - 사용 방법)
+ 
+```c
+#include <string>
+
+int a;
+string str;
+str=to_string(a);
+```
 
 ------
-### 2. 참신한 기법.
+### 2. 참신한 기법
 
 ------
-### 3. 문제 조건 맞추기.
+### 3. 문제 조건 맞추기
 ex) 시간 단축, 메모리 최적화, 자료형 설정.  
 
-#### 시간 단축.
+#### 시간 단축
 
 ```c
 ios_base::sync_with_stdio(false);
