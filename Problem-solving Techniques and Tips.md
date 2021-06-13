@@ -18,12 +18,13 @@ int a;
 string str;
 a=stoi(str);
 ```
-- 해시태그) #문자열 #변환
+ - 해시태그) #문자열 #자료형변환
 
 #### to_string 함수
  - to string 말 그대로 정수를 문자열로 변환하는 함수.
  - string 헤더파일에 선언되어 있음.
  - int, float, long long 등 정수 자료형 모두 사용 가능.
+ - 자릿수 연산에 많이 사용.
  - 사용 방법)
  
 ```c
@@ -33,9 +34,36 @@ int a;
 string str;
 str=to_string(a);
 ```
-- 해시태그) #문자열 #변환
+- 해시태그) #문자열 #자료형변환
 
+#### sort 함수
+ - 지정 범위 안의 인자들을 정렬해주는 함수.
+ - quick sort를 기반으로 하기 때문에 평균 시간 복잡도는 nlogn 이다.
+ - 세 번째 매개변수를 통해 자신이 원하는 특정 변수 기준으로 원하는 방식으로 정렬할 수 있음.
+ - 사용 방법)
+ 
+```c
+#include <algorithm>
 
+bool desc(int a, int b){ //내림 차순 정렬을 위한 함수.
+	return a<b;
+}
+
+int arr[5]={3,5,1,4,2};
+sort(arr,arr+5)); //default : 오름차순. 매개변수로 배열의 시작점 주소, 마지막 주소+1을 전달.
+sort(arr,arr+5,desc); // 내림차순. 세 번째 매개변수로 함수를 전달하여 자신이 원하는 형태로 정렬 기준을 설정할 수 있음.
+```
+ - #정렬 #퀵소트 #quick_sort #unstable
+
+#### stable_sort 함수
+ - 같은 키 값을 가지는 노드들이 sorting 된 후 순서가 바뀌지않도록(stable) 정렬해주는 함수.
+ - 일반 sort 함수의 경우 quick sort를 기반으로 하기 때문에 unstable하다.
+ - (분할 정복 방식으로 구현한 quick sort의 동작 과정을 생각해보면 unstable하다는 것을 깨달을 수 있다.)
+ - stable한 정렬인 merge sort를 기반으로 한다.
+ - 사용 방법은 sort함수와 동일, sort 를 stable_sort로 바꾸어 주면 된다.
+ - ex) stable_sort(arr,arr+5,desc);
+ 
+ - #정렬 #머지소트 #merge_sort #stable
 ------
 ### 2. 참신한 기법
 
@@ -76,3 +104,4 @@ fast IO 참고 글 https://cgiosy.github.io/posts/fast-io
 ------
 ### 4. 알쓸신잡(알아두면 쓸데'있'는 신비한 잡학사전)
 ex) 위에 분류되기엔 좀 애매한, 하지만 알아두면 좋은 내용들을 정리.
+
