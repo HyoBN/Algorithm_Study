@@ -1,7 +1,6 @@
 ## Problem-Solving Techniques and Tips
 
-PS를 하며 유용하게 사용할 수 있는 메소드나 기법, 알게 된 점 등  
-기억하고 활용할 만한 모든 내용을 정리.  
+PS를 하며 유용하게 사용할 수 있는 메소드나 기법, 알게 된 점 등 기억하고 활용할 만한 모든 내용을 정리.  
 
 ### 1. 메소드
 
@@ -53,7 +52,7 @@ int arr[5]={3,5,1,4,2};
 sort(arr,arr+5)); //default : 오름차순. 매개변수로 배열의 시작점 주소, 마지막 주소+1을 전달.
 sort(arr,arr+5,desc); // 내림차순. 세 번째 매개변수로 함수를 전달하여 자신이 원하는 형태로 정렬 기준을 설정할 수 있음.
 ```
- - #정렬 #퀵소트 #quick_sort #unstable
+ - 해시태그) #정렬 #퀵소트 #quick_sort #unstable
 
 #### stable_sort 함수
  - 같은 키 값을 가지는 노드들이 sorting 된 후 순서가 바뀌지않도록(stable) 정렬해주는 함수.
@@ -63,7 +62,7 @@ sort(arr,arr+5,desc); // 내림차순. 세 번째 매개변수로 함수를 전�
  - 사용 방법은 sort함수와 동일, sort 를 stable_sort로 바꾸어 주면 된다.
  - ex) stable_sort(arr,arr+5,desc);
  
- - #정렬 #머지소트 #merge_sort #stable
+ - 해시태그) #정렬 #머지소트 #merge_sort #stable
 ------
 ### 2. 참신한 기법
 
@@ -99,9 +98,14 @@ cout<<a<<'\n'; // 쓰기!
 ```
  - endl은 버퍼를 비우기 때문에 자주 사용하면 느려진다.
  
-fast IO 참고 글 https://cgiosy.github.io/posts/fast-io
+> fast IO 참고 글 https://cgiosy.github.io/posts/fast-io
 
 ------
 ### 4. 알쓸신잡(알아두면 쓸데'있'는 신비한 잡학사전)
 ex) 위에 분류되기엔 좀 애매한, 하지만 알아두면 좋은 내용들을 정리.
 
+#### #include<헤더파일> 과 #include "헤더파일" 의 차이점.
+
+1. #include <헤더파일>은 '컴파일러가 설치된 폴더'에서 해당 헤더 파일을 찾으라는 지시이다.
+2. #include "헤더파일"은 '현재 소스 파일이 존재하는 폴더에서 해당 헤더 파일을 먼저 찾고 없으면 '컴파일러가 설치된 폴더'에서도 찾는다.
+ - 사용자가 만든 헤더파일이나 추가 외부 라이브러리를 포함하고 싶은 경우 사용한다.
