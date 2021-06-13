@@ -18,6 +18,7 @@ int a;
 string str;
 a=stoi(str);
 ```
+- 해시태그) #문자열 #변환
 
 #### to_string 함수
  - to string 말 그대로 정수를 문자열로 변환하는 함수.
@@ -32,6 +33,8 @@ int a;
 string str;
 str=to_string(a);
 ```
+- 해시태그) #문자열 #변환
+
 
 ------
 ### 2. 참신한 기법
