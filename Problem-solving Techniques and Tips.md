@@ -37,6 +37,7 @@ str=to_string(a);
 
 #### sort 함수
  - 지정 범위 안의 인자들을 정렬해주는 함수.
+ - algorithm 헤더 파일에 선언되어 있다.
  - quick sort를 기반으로 하기 때문에 평균 시간 복잡도는 nlogn 이다.
  - 세 번째 매개변수를 통해 자신이 원하는 특정 변수 기준으로 원하는 방식으로 정렬할 수 있음.
  - 사용 방법)
@@ -63,6 +64,25 @@ sort(arr,arr+5,desc); // 내림차순. 세 번째 매개변수로 함수를 전�
  - ex) stable_sort(arr,arr+5,desc);
  
  - 해시태그) #정렬 #머지소트 #merge_sort #stable
+ 
+ 
+#### pair 클래스
+ - 두 객체를 하나의 객체로 취급할 수 있게 묶어주는 클래스이다.
+ - 데이터 쌍을 표현할 때 자주 사용된다.
+ - utility 헤더 파일에 선언되어 있다.
+ - pair<int, pair<int,int>>와 같이 중첩하여 사용도 가능.
+ - pair<int, string> 과 같이 다른 자료형도 묶을 수 있어서 유용함.
+ - 사용 방법)
+```c
+#include <utility>
+pair<int, int> p1;
+p1=make_pair(1,2);
+//p1={1,2}; 윗 줄과 동일.
+cout<<p1.first; //1출력됨.
+cout<<p1.second; // 2출력됨.
+```
+ - 해시태그) #pair #자료구조
+ 
 ------
 ### 2. 참신한 기법
 
