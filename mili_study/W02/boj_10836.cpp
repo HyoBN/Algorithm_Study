@@ -1,30 +1,36 @@
 #include <iostream>
 #include <vector>
-#include <cstring>
 using namespace std;
+
+int growth[1000001][3];
 
 int main()
 {
 	int map[701][701];
-	vector<int> growth;
-	
 	int m,n,x;
-	
 	scanf("%d %d",&m,&n);
 	vector<int> total_growth(2*m-1);
 
-	for(int i=0;i<n;i++) //date
+	int k;
+	int a,b,c;
+	
+	for(int i=0;i<n;i++)
 	{
-		for(int j=0;j<3;j++) // 성장 정도(0,1,2)
+		scanf("%d %d %d",&a,&b,&c);
+		growth[i][0]=a;
+		growth[i][1]=a+b;
+		growth[i][2]=a+b+c;
+		
+	}
+	
+	for(int i=0;i<n;i++)
+	{
+		k=0;
+		for(int j=0;j<3;j++)
 		{
-			scanf("%d",&x);
-			for(int k=0;k<x;k++) //0,1,2 각각의 개수만큼 반복
-				growth.push_back(j); // input : 1 2 3 -> growth={0,1,1,2,2,2}
+			for(;k<growth[i][j];k++)
+				total_growth[k]+=j;
 		}
-		for(int j=0;j<growth.size();j++)
-			total_growth[j]+=growth[j];
-
-		growth.clear();
 	}
 
 	for(int i=0;i<m;i++){
