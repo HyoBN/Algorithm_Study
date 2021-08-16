@@ -38,5 +38,4 @@ int main()
         cout<<ans[x]<<" ";
         
     return 0;
-    
 }
