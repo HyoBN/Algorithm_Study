@@ -1,63 +1,47 @@
 #include <iostream>
-#include <algorithm>
+#include <vector>
+#include <cstring>
+#include <queue>
 using namespace std;
 
-int n,q;
-int map[5001][5001];
-int usado[5001][5001];
+vector<pair<int,int>> v[5001];
+bool visited[5001];
 
-void DFS(int now, int start, int end, int min_value)
-{
-	if(map[now][end]!=0){
-		usado[start][end]=min(min_value,map[now][end]);
-		return;
-	}
-	
-	for(int i=1;i<=n;i++){
-		if(map[now][i]!=0){
-			if(min_value==0)
-				DFS(i,start,end,map[now][i]);
-			else
-				DFS(i,start,end,(int)min(min_value,map[now][i]));
-		}
-	}
-}
-
-int main()
-{
-	int a,b,c;
-	int k,v;
-	int cnt;
-	
-	scanf("%d %d",&n,&q);
-	
-	for(int i=1;i<n;i++){
+int main() {
+	int N, Q;
+	scanf("%d %d",&N,&Q);
+	for (int i = 0; i < N-1; i++) {
+		int a, b, c;
 		scanf("%d %d %d",&a,&b,&c);
-		map[a][b]=c;
-		map[b][a]=c;
-		usado[a][b]=c;
-	}
-
-	int tmp;
-	for(int i=1;i<=n;i++)
-	{
-		for(int j=1;j<=n;j++)
-		{
-			if(i==j || usado[i][j]!=0) continue;
-			DFS(i,i,j,1000000001);
-
-		}
+		v[a].push_back({ b,c });
+		v[b].push_back({ a,c });
 	}
 	
-	for(int i=0;i<q;i++)
-	{
-		cnt=0;
-		scanf("%d %d",&k,&v);
+	for (int i = 0; i < Q; i++) {
+		int k, nth;
+		scanf("%d %d",&k,&nth);
+		memset(visited, false, sizeof(visited));
+		visited[nth] = true;
+		int cnt = 0;
+		queue<int> q;
+		q.push(nth);
 		
-		for(int i=1;i<=n;i++)
-			if(usado[v][i]>=k || usado[i][v]>=k)
-				cnt++;
+		while (!q.empty()) {
+			int now = q.front();
+			q.pop();
+			for (int i = 0; i < v[now].size(); i++) {
+				int next = v[now][i].first;
+				int cost = v[now][i].second;
+				if (visited[next]) continue; 
+				if (cost >= k) {
+					cnt++;
+					visited[next] = true;
+					q.push(next);
+				}
+			}
+		}
 		printf("%d\n",cnt);
 	}
-	
+
+	return 0;
 }
