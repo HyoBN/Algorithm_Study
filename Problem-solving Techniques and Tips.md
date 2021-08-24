@@ -160,6 +160,49 @@ swap(q1,q2);
 ------
 ## 2. 참신한 기법
 
+
+### 2의 n승 구하기.
+ - cmath 라이브러리의 pow 메소드를 활용하는 방법도 있지만, 단순히 2의 n승 값을 구해야 하는 경우,
+ shift 연산을 활용하는 것이 더 빠르다.
+
+```c
+int a=5;
+a=a<<1; // 2의 a승 / 1을 a만큼 shift
+cout<<a;
+```
+
+- shift 연산은 비트 연산이며, 비트 연산은 기계어 레벨 즉, low level에서 연산이 진행되기 때문에 일반 연산이나 메소드들보다 빠르다.
+
+```c
+
+#include <iostream>
+#include <cmath>
+#include <time.h>
+using namespace std;
+
+int main()
+{
+	clock_t start, end;
+	double result;
+	int a=50;
+	long long b;
+
+	start=clock();
+	
+	//b=pow(2,a);
+	b=1<<a;
+	
+	cout<<b;
+	
+	end=clock();
+	
+	result=(double)(end-start);
+	cout<<"result : "<<result;
+}
+```
+
+- 위의 코드로 직접 실험해보았을 때, shift 연산이 pow 메소드보다 1.5~2배 정도 빠르다는 사실을 확인할 수 있었다.
+
 ------
 ## 3. 문제 조건 맞추기
 ex) 시간 단축, 메모리 최적화, 자료형 설정.  
@@ -240,3 +283,13 @@ cout<<a<<'\n'; // 쓰기!
 #### 런 타임(Run time)
 - 컴파일 과정을 마친 프로그램 즉, 응용프로그램이 동작되어지는 떄를 런 타임이라 한다.
 - 런타임 에러 :예상치 못한 오류 또는 충돌 등을 이유로 성공적으로 컴파일 되었더라도 프로그램이 실행 중에 발생하는 형태의 에러.
+
+
+### segmentation fault error
+
+segmentation Fault는 세그멘테이션 위반으로, 세그폴트라고 줄여 쓰기도 한다.  
+
+세그멘테이션 오류 (core dumped) 라는 메시지의 오류가 뜨는 경우 주된 원인은 다음과 같다.  
+1. 프로그램이 허용하지 않은 메모리에 접근을 시도하였을 경우.
+2. 허용되지 않은 방법으로 메모리 영역에 접근을 시도하였을 경우.
+
