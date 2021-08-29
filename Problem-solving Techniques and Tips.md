@@ -157,6 +157,57 @@ swap(q1,q2);
 ```
 
  - 해시태그) #큐 #Queue #자료구조
+
+### 순열, 조합
+ - 순열(permutation) : n개의 원소 중, m개를 선택하여 한줄로 세우는 경우의 수, 순서 고려.
+ - 조합(combination) : n개의 원소 중 m개를 뽑는 경우, 순서 상관x.
+ - 순열과 조합의 모든 경우의 수를 출력해주는 메소드이다.
+ - 주의할 점) 오름차순으로 정렬된 값을 가진 값들을 사용해야한다.
+ - 오름차순으로 출력해준다.
+ - algorithm 헤더 파일에 선언되어 있다.
+ - 사용방법)
+
+
+```c
+//------------- 순열 구하기. 4P3
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main()
+{
+	int arr[4]={1,2,3,4};
+	sort(arr,arr+4);	
+	do{
+		for(int i=0;i<3;i++)
+			cout<<arr[i]<<' ';
+		cout<<'\n';
+	}while(next_permutation(arr,arr+3));
+	
+}
+```
+
+```c
+//------------- 조합 구하기. 4C3
+#include <iostream>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	int arr[4]={1,2,3,4};
+	int tmp[4]={0,0,0,1}; // m개의 원소를 0로, (n-m)개의 원소는 1로 초기화
+	sort(arr,arr+4);
+	do{
+			for(int i=0;i<4;i++) //배열 원소 개수
+				if(tmp[i]==0)
+					printf("%d ",arr[i]);
+			printf("\n");
+	}while(next_permutation(tmp,tmp+4));
+	
+}
+```
+
+- 해시태그) #순열 #조합 #permutation #combination
+
 ------
 ## 2. 참신한 기법
 
