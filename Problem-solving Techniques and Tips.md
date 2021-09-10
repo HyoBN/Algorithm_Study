@@ -208,6 +208,40 @@ int main()
 
 - 해시태그) #순열 #조합 #permutation #combination
 
+
+### 중복 제거하기
+ - vector의 unique 메소드를 활용하여 컨테이너의 중복을 제거하여 저장할 수 있다.
+ - unique : 정렬된 벡터에서 연속되는 중복 원소를 벡터의 가장 뒷부분(쓰레기 값)으로 보낸다.
+ - unique 메소드의 반환값은 해당 벡터의 가장 뒷부분(쓰레기 값)의 첫번째 위치이다.
+ - 사용 방법)
+ 
+```c
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+	vector<int> v;
+	v.push_back(3);
+	v.push_back(2);
+	v.push_back(1);
+	v.push_back(4);
+	v.push_back(3);
+	v.push_back(2);
+	
+	sort(v.begin(),v.end()); // 1.벡터를 정렬한다.
+	v.erase(unique(v.begin(),v.end()),v.end()); 2. 쓰레기 값의 시작~벡터의 끝까지 제거(중복되는 쓰레기값 제거 == 중복 제거).
+	
+	for(int i=0;i<v.size();i++)
+		cout<<v[i]<<" ";
+}
+```
+
+ - 해시태그) #배열중복 #중복 #중복제거 #벡터
+ 
+
 ------
 ## 2. 참신한 기법
 
