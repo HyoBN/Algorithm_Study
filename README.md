@@ -16,7 +16,7 @@
 ## /inflearn_lecture
 
 - https://www.inflearn.com/course/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98
-- 강의 수강하며 유익한 정보 정리, 문제 및 풀이 정리.
+- 인프런 알고리즘 강의 수강하며 유익한 정보, 풀이 테크닉 정리.
 
 ---------------------
 
@@ -25,6 +25,8 @@
 매주 4~6문제를 선정하고 풀어본 후, 모여서 풀이 방법 공유 및 피드백하는 스터디
 
 2021/08/02 시작
+
+※ 4주차 이후부터 스터디 활동 편의성을 위해 github organization 활용( https://github.com/DBSI-study/algorithm-ps )
 
 ------------------
 
