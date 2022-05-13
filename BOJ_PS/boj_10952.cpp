@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int main()
+int main_10952()
 {
 	int a,b;
 	

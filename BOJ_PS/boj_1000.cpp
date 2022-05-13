@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int main()
+int main_1000()
 {
 	int a,b;
 	cin>>a>>b;

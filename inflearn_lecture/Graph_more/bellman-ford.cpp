@@ -38,7 +38,7 @@ int main()
 			int u=ed[j].s;
 			int v=ed[j].e;
 			int w=ed[j].val;
-			if(dist[s]!=2147000000 && dist[u]+w<dist[v]) //출발 node의 값과 가중치 값을 더한 값이 기존의 값보다 작다면.
+			if(dist[u]!=2147000000 && dist[u]+w<dist[v]) //출발 node의 값과 가중치 값을 더한 값이 기존의 값보다 작다면.
 				dist[v]=dist[u]+w; // 갱신!
 		}
 	}

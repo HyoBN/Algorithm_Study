@@ -34,5 +34,4 @@ int main()
 	visited[1]=true;
 	DFS(1,0);
 	printf(cnt%2==1 ? "Yes" : "No");
-//	cnt%2==1 ? printf("Yes") : printf("No");
 }

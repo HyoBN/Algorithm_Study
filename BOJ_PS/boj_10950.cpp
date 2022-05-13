@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main()
+int main_10950()
 {
 	int a,b,t;
 	

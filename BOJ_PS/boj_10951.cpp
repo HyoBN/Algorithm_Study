@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main()
+int main_10951()
 {
 	int a,b;
 	while(scanf("%d %d",&a,&b)!=EOF)

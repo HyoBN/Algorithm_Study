@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main()
+int main_2558()
 {
 	int a,b;
 	scanf("%d %d",&a,&b);
