@@ -86,4 +86,32 @@ https://www.acmicpc.net/problem/13975 골드4 그리디+우선순위 큐
 https://www.acmicpc.net/problem/1365 골드2 이분탐색
 
 
+서브 태스크 있는 문제들로 재구성(역대 정올 기출 위주)
+
+<중등부>
+
+https://www.acmicpc.net/problem/22342
+
+https://www.acmicpc.net/problem/20187
+
+https://www.acmicpc.net/problem/22345
+
+https://www.acmicpc.net/problem/14865
+
+https://www.acmicpc.net/problem/10838
+
+<초등부>
+
+https://www.acmicpc.net/problem/25377
+
+https://www.acmicpc.net/problem/22342
+
+https://www.acmicpc.net/problem/20186
+
+https://www.acmicpc.net/problem/20187
+
+https://www.acmicpc.net/problem/14865
+
+
+
 
