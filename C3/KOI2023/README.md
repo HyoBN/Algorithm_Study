@@ -42,7 +42,7 @@ https://www.acmicpc.net/problem/2539 골드3
 
 https://www.acmicpc.net/problem/1561 골드2
 
-https://www.acmicpc.net/problem/1637 플드4
+https://www.acmicpc.net/problem/1637 플래4
 
 
 
@@ -56,8 +56,6 @@ https://www.acmicpc.net/problem/16197 골드4
 https://www.acmicpc.net/problem/19538 골드4
 
 https://www.acmicpc.net/problem/17616 골드3
-
-https://www.acmicpc.net/problem/2842 플래티넘5
 
 
 
@@ -85,7 +83,7 @@ https://www.acmicpc.net/problem/25401 골드5 브루트포스
 
 https://www.acmicpc.net/problem/13975 골드4 그리디+우선순위 큐
 
-https://www.acmicpc.net/problem/25401 골드2 이분탐색
+https://www.acmicpc.net/problem/1365 골드2 이분탐색
 
 
 
